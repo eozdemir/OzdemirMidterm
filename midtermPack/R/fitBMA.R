@@ -56,7 +56,7 @@ setMethod(f="fitBMA",
             posteriorE<- vector(length=2^ncol(x)) #posterior expected values to be calculated
           #fit the regression
             reg<- a_ply(.data=1:ncol(covCombn), .margins=1, .fun=function(c){
-            model<- lm(scaled.y~scaled.x[,selectorMatrix[,c]]-1)
+            model<- lm(scaled.y~scaled.x[,covCombn[,c]]-1)
             coefficients[covCombn[,c],c]<- model[[1]]
             r2[c]<<- summary(model)[["r.squared"]]
             return(list(coefficients=coefficients[,c], r2=r2))
