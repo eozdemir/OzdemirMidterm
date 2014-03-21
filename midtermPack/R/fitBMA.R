@@ -27,13 +27,14 @@
 #' 
 #' @export
 setGeneric(name="fitBMA",
-           def=function(x, y, g=4, parallel=FALSE)
+           def=function(x, y, g=4) 
+             #I couldn't make parallel work, so i am removing it from the function
            {standardGeneric("fitBMA")}
            )
 
 #' @export
 setMethod(f="fitBMA",
-          definition=function(x, y, g=4, parallel=FALSE){ #the default will take g as 4 (i remember it can be 3 or 4 from class) and the parallel will not run unless the user specifies
+          definition=function(x, y, g=4){ #the default will take g as 4 (i remember it can be 3 or 4 from class) and the parallel will not run unless the user specifies
           ##Standardization of covariates so that we won't need intercept
           #I used scale() function, thanks to google!  
           #http://stackoverflow.com/questions/15215457/standardize-data-columns-in-r
