@@ -62,10 +62,8 @@ setMethod(f="fitBMA",
             return(list(coefficients=coefficients[,c], r2=r2))
           }#end of function
           )#end of a_ply
-              a_ply(.data=1:length(reg), .fun=function(d){
-              coefficients[,d+1]<<- reg[[d]][[1]] #assignment in S4 class
-            }#end of function
-            )#end of a_ply
+            #check:not sure if it should be different when intercept removed
+            #kept the problem set code I used before
             
             ##Calculation of the BMA formulas from the slides provided
             #Posterior model odds

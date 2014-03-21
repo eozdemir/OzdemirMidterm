@@ -1,9 +1,12 @@
 Package: midtermPack
 Title: Bayesian Model Averaging package
-Description: BMA accounts for the model uncertainty inherent in the variable selection problem by averaging over the best models in the model class according to approximate posterior model probability
+Description: BMA accounts for the model uncertainty inherent in the variable
+    selection problem by averaging over the best models in the model class
+    according to approximate posterior model probability
 Version: 0.1
 Authors: Elif Ozdemir
 Maintainer: Elif Ozdemir <eozdemir@wustl.edu>
-Depends: R (>= 3.0.3)
+Depends:
+    R (>= 3.0.3)
 License: GPL (>= 2)
 LazyData: true
